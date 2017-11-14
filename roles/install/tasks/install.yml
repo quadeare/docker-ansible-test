@@ -1,9 +1,5 @@
 ---
 
-- set_fact:
-    setup_script_checksum: "md5:{{ setup_script_md5_sum }}"
-  when: setup_script_md5_sum is defined and setup_script_md5_sum
-
 - name: Download docker setup script for desired version
   get_url:
     url: "{{ setup_script_url }}"
