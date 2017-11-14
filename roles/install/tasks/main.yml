@@ -9,7 +9,7 @@
   ignore_errors: yes
 
 - include: "install.yml"
-  when: (which_dockerd | failed)
+  when: upgrade_docker or (which_dockerd | failed)
 
 - name: ensure config folder is present
   file:
