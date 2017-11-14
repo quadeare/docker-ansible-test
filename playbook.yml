@@ -1,4 +1,5 @@
 ---
 - name: Example playbook
+  hosts: all
   roles:
     - { role: install }
